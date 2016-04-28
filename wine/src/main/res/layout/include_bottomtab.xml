@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+  <LinearLayout
+        android:id="@+id/linear_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/wine"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rela_home"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_img"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="首页"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rela_shopcar"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_shopcar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_shopcar"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/ima_shopcar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopcar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_ordercenter"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_ordercenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_ordercenter"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/ima_ordercenter"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ordercenter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_guide"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_guide"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/ima_guide"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/guide" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_sale"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tab_bg"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/text_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_sale"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="13.0sp" />
+
+            <ImageView
+                android:id="@+id/ima_sale"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/sale" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+</LinearLayout>

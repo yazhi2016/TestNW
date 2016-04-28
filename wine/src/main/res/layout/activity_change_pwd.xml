@@ -1,0 +1,161 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.xmzlb.wine.ChangePwdActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/text_uilocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="用户中心 > 收货地址管理 > 添加收货地址" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/h_line_bg" />
+
+    <EditText
+        android:id="@+id/edit_oldpwd"
+        style="@style/style_changePwd_textsizeAndPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dingweiact_bar"
+        android:background="@null"
+        android:hint="旧密码"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/h_line_bg" />
+
+    <EditText
+        android:id="@+id/edit_newpwd"
+        style="@style/style_changePwd_textsizeAndPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dingweiact_bar"
+        android:background="@null"
+        android:hint="新密码"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/h_line_bg" />
+
+    <EditText
+        android:id="@+id/edit_newpwd2"
+        style="@style/style_changePwd_textsizeAndPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dingweiact_bar"
+        android:background="@null"
+        android:hint="再次输入新密码"
+        android:inputType="textPassword" >
+    </EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/h_line_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mefra_item_ba"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/style_changePwd_textsizeAndPadding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="找回密码"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView1"
+            android:singleLine="true"
+            android:text=" (点击后系统将自动发送新密码到您的手机)"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/h_line_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="15dip"
+            android:layout_height="15dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dip"
+            android:src="@drawable/attention" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/imageView11"
+            android:singleLine="true"
+            android:text="您的新密码必须是：8个及以上字符、大小写字母和数字"
+            android:textColor="#A5A5A5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_login_mefra"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/selector_corner_gold_gray"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="确认修改"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/bottomlayout" />
+
+</LinearLayout>

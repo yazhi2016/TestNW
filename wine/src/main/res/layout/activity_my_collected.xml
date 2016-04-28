@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.MyCollectedActivity" >
+
+	
+    <RelativeLayout
+        android:id="@+id/dingweiact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/style_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="我的收藏" />
+
+        <TextView
+            android:id="@+id/text_edit_mycollect"
+            style="@style/style_bar_button_text"
+            android:layout_alignParentRight="true"
+            android:text="编辑" />
+
+        <RelativeLayout
+            android:id="@+id/around_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dip"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/gridView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rela_mycollectes"
+        android:layout_below="@+id/dingweiact_bar"
+        android:layout_centerHorizontal="true"
+        android:horizontalSpacing="0dip"
+        android:numColumns="2"
+        android:padding="5dip"
+        android:verticalSpacing="8dip" >
+    </GridView>
+
+    <RelativeLayout
+        android:id="@+id/rela_mycollectes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:background="#EEEEEE" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/selector_btn_shopfra_pay"
+            android:text="删除"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+    
+</RelativeLayout>

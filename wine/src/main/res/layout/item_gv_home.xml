@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_strokegray" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1"
+            android:scaleType="centerCrop"
+            android:layout_margin="10dp"
+            fresco:placeholderImage="@drawable/white"/>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_below="@+id/imageView1"
+            android:text=" "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_homefra" />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_title"
+            android:paddingBottom="@dimen/padding2_homefra"
+            android:paddingRight="@dimen/padding3_homefra"
+            android:paddingTop="@dimen/padding4_homefra"
+            android:text=""
+            android:textColor="@color/wine"
+            android:textSize="@dimen/textsize2_homefra" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

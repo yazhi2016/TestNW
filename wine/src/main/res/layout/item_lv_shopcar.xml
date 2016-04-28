@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-2dp"
+            android:text="" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageView1"
+            android:layout_width="81dp"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/checkBox1"
+            fresco:placeholderImage="@drawable/white"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imageView1" >
+
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="match_parent"
+                android:textSize="13sp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text=" "
+                android:maxLines="2"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/textsize_shopcar"
+                android:layout_alignParentLeft="true"
+                android:text="商品规格：" />
+
+            <TextView
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_corner_gold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView1"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="0dp"
+                android:textSize="@dimen/textsize_shopcar"
+                android:text="促销信息：" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView2"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="0dp"
+                android:textSize="@dimen/textsize_shopcar"
+                android:text="价格：" />
+
+            <TextView
+                android:id="@+id/text_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView2"
+                android:layout_marginBottom="0dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:textSize="@dimen/textsize_shopcar"
+                android:text=" "
+                android:textColor="@color/wine" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_shopcar"
+                android:layout_above="@+id/textView2"
+                android:layout_marginBottom="0dp"
+                android:layout_toLeftOf="@+id/rela_choosenum"
+                android:layout_marginRight="5dp"
+                android:text="数量：" />
+
+            <RelativeLayout
+                android:id="@+id/rela_choosenum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true">
+
+                <ImageView
+                    android:id="@+id/ima_substract_detailact"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/selector_substract" />
+
+                <TextView
+                    android:id="@+id/editText1"
+                    android:layout_width="30dp"
+                    android:gravity="center"
+                    android:textSize="13sp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ima_substract_detailact"
+                    android:text="1"
+                    android:background="@drawable/shape_strokedeepgray_white">
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/ima_addt_detailact"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/editText1"
+                    android:src="@drawable/selector_add" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

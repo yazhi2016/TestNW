@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xmzlb.wine.MyInfoActivity" >
+
+    <RelativeLayout
+        android:id="@+id/dingweiact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="个人信息"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/around_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dip"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mefra_imasize"
+        android:background="@drawable/gold" >
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ima_myInfo"
+            android:layout_width="@dimen/mefra_userima_size"
+            android:layout_height="@dimen/mefra_userima_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/white" />
+
+        <TextView
+            android:id="@+id/text_name2_myinfoact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="掌酒通"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/myInfo_changeIma"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/dingweiact_bar"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:src="@drawable/return2" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/style_safecenter_text"
+                android:text="更换头像" />
+        </RelativeLayout>
+
+        <include layout="@layout/line2_mefra" />
+
+        <RelativeLayout
+            android:id="@+id/myInfo_changeName"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/style_safecenter_text"
+                android:text="帐户名：" />
+
+            <TextView
+                android:id="@+id/text_name_myinfoact"
+                style="@style/style_myinfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="掌酒通" />
+        </RelativeLayout>
+
+        <include layout="@layout/line2_mefra" />
+
+        <RelativeLayout
+            android:id="@+id/myInfo_changeSex"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/style_safecenter_text"
+                android:text="经营许可证：" />
+
+            <TextView
+                android:id="@+id/textView7"
+                style="@style/style_myinfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123456789" />
+        </RelativeLayout>
+
+        <include layout="@layout/line2_mefra" />
+
+        <RelativeLayout
+            android:id="@+id/myInfo_changeBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <TextView
+                android:id="@+id/textView8"
+                style="@style/style_safecenter_text"
+                android:text="身份证：" />
+
+            <TextView
+                android:id="@+id/textView9"
+                style="@style/style_myinfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="132456789" />
+        </RelativeLayout>
+
+        <include layout="@layout/line2_mefra" />
+
+        <RelativeLayout
+            android:id="@+id/myInfo_location"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <TextView
+                android:id="@+id/textView10"
+                style="@style/style_safecenter_text"
+                android:text="地区" />
+
+            <TextView
+                android:id="@+id/text_location_myinfo"
+                style="@style/style_myinfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="福建厦门" />
+        </RelativeLayout>
+
+        <include layout="@layout/line2_mefra" />
+
+        <RelativeLayout
+            android:id="@+id/myInfo_sign"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/mefra_item_ba" >
+
+            <TextView
+                android:id="@+id/textView14"
+                style="@style/style_safecenter_text"
+                android:text="店名：" />
+
+            <TextView
+                android:id="@+id/text_shopname_myinfo"
+                style="@style/style_myinfo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="掌酒通" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

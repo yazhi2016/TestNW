@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_strokegray" >
+
+        <com.xmzlb.util.SquareImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/white" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/imageView1"
+            android:layout_alignRight="@+id/imageView1"
+            android:layout_below="@+id/imageView1"
+            android:text=" "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_homefra" />
+
+        <TextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_title"
+            android:paddingBottom="@dimen/padding2_homefra"
+            android:paddingRight="@dimen/padding3_homefra"
+            android:paddingTop="@dimen/padding4_homefra"
+            android:text="￥"
+            android:textColor="@color/wine"
+            android:textSize="@dimen/textsize2_homefra" />
+            
+         <ImageView
+            android:id="@+id/ima_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/deletecollection" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

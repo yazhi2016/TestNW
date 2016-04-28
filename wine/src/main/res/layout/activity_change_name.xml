@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.ChangeNameActivity" >
+
+     <RelativeLayout
+        android:id="@+id/dingweiact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/style_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="修改昵称" />
+
+        <TextView
+            android:id="@+id/checkbox_shopfra_edit"
+            style="@style/style_bar_button_text"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black"
+            android:text="完成" />
+
+        <RelativeLayout
+            android:id="@+id/around_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dip"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_name"
+        style="@style/style_addAddress_textsizeAndPadding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/dingweiact_bar"
+        android:background="@drawable/addaddress_edit_selector"
+        android:hint="输入昵称" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_name"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="2dp"
+        android:text="昵称长度为2-20个字符，由汉字、字母、数字、“-”组成"
+        android:layout_marginTop="8dip"
+        android:layout_alignLeft="@+id/edit_name"
+        android:textColor="#A5A5A5"
+        android:textSize="11sp" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.ChoosePicActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/empty_bottom">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shape_corner_white_strokegray"
+            android:text="取消"
+            android:textColor="@color/red"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_cancel"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/shape_corner_white_strokegray"
+            android:text="从相册选择"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <Button
+            android:id="@+id/btn_takephoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_choose"
+            android:layout_marginBottom="-1dp"
+            android:background="@drawable/shape_corner_white_strokegray"
+            android:text="拍照"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/text_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/halflucency"
+            android:layout_above="@+id/btn_takephoto" />
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/empty_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/lucency" />
+
+</RelativeLayout>

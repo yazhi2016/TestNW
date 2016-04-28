@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_strokegray" >
+
+        <com.xmzlb.util.SquareImageView
+            android:id="@+id/ima_25_homefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin1_homefra"
+            android:src="@drawable/white" />
+
+        <TextView
+            android:id="@+id/text_name_25_homefra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ima_25_homefra"
+            android:layout_alignRight="@+id/ima_25_homefra"
+            android:layout_below="@+id/ima_25_homefra"
+            android:layout_marginLeft="@dimen/margin2_homefra"
+            android:layout_marginRight="@dimen/margin2_homefra"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_homefra" />
+
+        <TextView
+            android:id="@+id/text_price_25_homefra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/text_name_25_homefra"
+            android:paddingBottom="@dimen/padding2_homefra"
+            android:paddingRight="@dimen/padding3_homefra"
+            android:paddingTop="@dimen/padding4_homefra"
+            android:text="￥"
+            android:textColor="@color/wine"
+            android:textSize="@dimen/textsize2_homefra" />
+    </RelativeLayout>
+
+</RelativeLayout>

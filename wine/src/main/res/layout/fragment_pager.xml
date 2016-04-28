@@ -1,0 +1,34 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.PagerFragment" >
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.xmzlb.util.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/rela_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager_banner_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_heightPercent="87%w"
+            android:visibility="visible" />
+
+        <com.xmzlb.util.ViewPagerIndicator2
+            android:id="@+id/indicator_detailact"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginLeft="-30dp"
+            android:layout_alignBottom="@+id/pager_banner_detail"
+            android:layout_centerHorizontal="true" />
+    </com.xmzlb.util.PercentRelativeLayout>
+
+</FrameLayout>

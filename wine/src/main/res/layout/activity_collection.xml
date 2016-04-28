@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    tools:context="com.xmzlb.wine.CollectionActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/text_uilocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="用户中心 > 我的收藏" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:text="点击右上角的X删除商品"
+        android:textColor="@color/blue"
+        android:textSize="12sp" />
+
+    <GridView
+        android:id="@+id/gv_collection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottombar"
+        android:layout_margin="5dp"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp"
+        android:layout_below="@+id/text_uilocation"
+        android:layout_centerHorizontal="true"
+        android:numColumns="2" >
+    </GridView>
+
+    <include
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottomlayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收藏空空如也，快去收藏吧"
+        android:textSize="20sp"
+        android:id="@+id/text_nothing"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_alignTop="@+id/gv_collection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.xmzlb.wine.NewDetailActivity" >
+
+    <item
+        android:id="@+id/home_menu_detailact"
+        android:orderInCategory="100"
+        android:title="首页"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/shopcar_menu_detailact"
+        android:orderInCategory="100"
+        android:title="购物车"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/ordercenter_menu_detailact"
+        android:orderInCategory="100"
+        android:title="订单中心"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/usercenter_menu_detailact"
+        android:orderInCategory="100"
+        android:title="用户中心"
+        app:showAsAction="never"/>
+
+</menu>

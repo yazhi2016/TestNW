@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="wine">#9D812A</color>
+    <color name="gray">#D5D5D5</color>
+    <color name="red">#D70005</color>
+    <color name="gray_bar">#E2E2E2</color>
+    <color name="gold">#AA8D31</color>
+    <color name="gold1">#EAAE00</color>
+    <color name="pink">#DA3551</color>
+    <color name="lucency">#00000000</color>
+    <color name="blue">#5958FA</color>
+    <color name="tab_item_bgcolor_select">#4C4C4C</color>
+    <color name="tab_item_bgcolor_normal">#282828</color>
+    <color name="top">#E2E2E2</color>
+    <color name="h_line_bg">#DADADA</color>
+    <color name="color_me_item_text">#7A7A7A</color>
+    <color name="color_shop_item_price">#D86D6C</color>
+    <color name="color_shop_item_product">#AEAEAE</color>
+    <color name="color_fenlei_button_unchecked">#6F6F6F</color>
+    <color name="color_address_edit">#C9C9C9</color>
+    <color name="color_myinfo_pop">#2186FE</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+    <color name="actionsheet_blue">#037BFF</color>
+    <color name="deepgray">#A7A7A7</color>
+    <color name="orange">#FF6B13</color>
+    <color name="deepgray2">#A0A0A0</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="none_color">#00000000</color>
+    <color name="plugin_camera_black">#000000</color>
+    <color name="albumback">#E1E0DE</color>
+
+</resources>

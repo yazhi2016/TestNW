@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.xmzlb.wine"
+        minSdkVersion 11
+        targetSdkVersion 21
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+        multiDexEnabled true
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "fuueOx6cOs7QUJCsuXT057",
+                GETUI_APP_KEY   : "lbrGEVA8nV6SS4jNN28CZ9",
+                GETUI_APP_SECRET: "Iqn1Lo9lah7iXeOHOyRY88",
+                PACKAGE_NAME    : applicationId
+        ]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':lib_yuchen1204')
+    compile project(':lib_SwipeMenuListView')
+    compile project(':lib_ptr')
+    //    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile files('libs/alipaySdk-20160223.jar')
+    compile files('libs/pgyer_sdk_2.2.2.jar')
+    compile files('libs/umeng-analytics-v5.6.4.jar')
+    compile files('libs/xutil-3.3.20.jar')
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.getui:sdk:2.7.0.0'
+    compile 'com.getui:ext:2.0.3'
+//    compile 'com.android.support:support-v4:+'
+    //LeakCanary内存泄露检测
+//        debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+//        releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+//        testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2'
+    compile files('libs/libammsdk.jar')
+
+    compile 'com.facebook.fresco:fresco:0.10.0'
+}

@@ -1,0 +1,312 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.SupplyActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_popsale"
+        android:layout_centerHorizontal="true"
+        android:background="#EAEAEA"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="我要供货"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text=" "
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rela_popbrand_packup_homefra"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_normal_is_lightgray" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="收起"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:src="@drawable/packup2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_popsale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rela_bottom_popsale"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="30dp" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp" >
+
+            <TextView
+                android:id="@+id/textview_producename_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="商品名称:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_producename_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/textview_num_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="可供货数量:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_num_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:inputType="number"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/textview_price_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="商城批发售价:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_price_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:inputType="numberDecimal"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/textview_area_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="经销权限区域:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_area_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/textview_name_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="联系人:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_name_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp" >
+
+            <TextView
+                android:id="@+id/textview_phone_popsale"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="联系电话:"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/textview_phone_popsale"
+                android:background="@drawable/shape_corner_strokegray_white"
+                android:ems="5"
+                android:inputType="number"
+                android:paddingLeft="3dp"
+                android:textColor="@color/black" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_corner_strokedeepgray_lightgray"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/black"
+                android:text="确认提交" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_bottom_popsale"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/empty_popsale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentLeft="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text="品类"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="品牌导航"
+            android:textColor="@color/black" />
+
+        <RelativeLayout
+            android:id="@+id/rela_popbrand_packup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_normal_is_white"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="收起"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/textView1"
+                android:src="@drawable/packup" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout1"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:background="@drawable/lucency"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearLayout1">
+
+        <ListView
+            android:id="@+id/lv_popbrand"
+            android:scrollbars="none"
+            android:layout_weight="3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:dividerHeight="1dp"
+            android:background="@drawable/lucency"
+            android:divider="@drawable/white"
+            android:layout_alignParentTop="true" >
+        </ListView>
+
+        <GridView
+            android:id="@+id/gv_popbrand"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/halflucency3"
+            android:numColumns="3" >
+        </GridView>
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/lucency" >
+    </RelativeLayout>
+
+</RelativeLayout>

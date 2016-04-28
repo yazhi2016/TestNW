@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.xmzlb.wine.ScoreCityActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/text_uilocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="用户中心 > 积分商城" />
+
+    <TextView
+        android:id="@+id/henxian"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/text_uilocation"
+        android:background="@color/gray" />
+
+    <include
+        android:id="@+id/rela_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/henxian"
+        layout="@layout/sort_layout" />
+
+    <GridView
+        android:id="@+id/gv_scorecity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/rela_sort"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:horizontalSpacing="3dp"
+        android:numColumns="2"
+        android:verticalSpacing="3dp" >
+    </GridView>
+    
+    <TextView 
+        android:id="@+id/text_nothing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:text="很抱歉，暂时没有商品"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+
+    <include
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottomlayout" />
+
+</RelativeLayout>

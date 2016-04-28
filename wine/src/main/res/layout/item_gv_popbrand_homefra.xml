@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/lucency" >
+
+    <com.xmzlb.util.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/lucency"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ima_item_gvpopbrand_homefra"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/lucency"/>
+
+        <com.xmzlb.util.SquareImageView
+            android:id="@+id/ima_item_gvpopbrand_homefra1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitStart"
+            android:src="@drawable/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ima_item_gvpopbrand_homefra"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:text=" "
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </com.xmzlb.util.PercentRelativeLayout>
+
+</RelativeLayout>

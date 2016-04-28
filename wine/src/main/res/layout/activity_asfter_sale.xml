@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    tools:context="com.xmzlb.wine.AfterSaleActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/text_uilocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="用户中心 > 收货地址管理 > 添加收货地址" />
+
+    <RelativeLayout
+        android:id="@+id/rela1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_uilocation"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/error" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="点击完结后退换货记录自动删除"
+            android:textColor="@color/blue"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btn_changeIma"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView6"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@color/wine"
+            android:gravity="center"
+            android:text="新增申请"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rela1"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_login_mefra"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/selector_corner_gold_gray"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="申请处理中"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_aftersale"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+
+    <include
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottomlayout" />
+
+</RelativeLayout>

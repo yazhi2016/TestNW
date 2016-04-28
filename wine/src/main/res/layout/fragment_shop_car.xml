@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/toplayout" />
+
+    <ListView
+        android:id="@+id/lv_shop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rela_pay"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/rela_nothing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rela_pay"
+        android:layout_below="@+id/include1"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="112dp" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/shopcar2" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView1"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imageView1"
+                android:background="@color/gray" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_centerHorizontal="true"
+            android:text="购物车还是空的" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:text="去挑几件中意的商品吧" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_pay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp" >
+
+        <TextView
+            android:id="@+id/text_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/wine"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="结算"
+            android:textColor="@color/white" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="全选" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBox1"
+            android:layout_alignBottom="@+id/checkBox1"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/checkBox1"
+            android:text="已选商品" />
+
+        <TextView
+            android:id="@+id/text_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBox1"
+            android:layout_alignBottom="@+id/checkBox1"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/textView2"
+            android:text="0"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBox1"
+            android:layout_alignBottom="@+id/checkBox1"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/text_num"
+            android:text="单，总金额" />
+
+        <TextView
+            android:id="@+id/text_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/checkBox1"
+            android:layout_alignBottom="@+id/checkBox1"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@+id/textView3"
+            android:text="￥0"
+            android:textColor="@color/red" />
+    </RelativeLayout>
+
+</RelativeLayout>

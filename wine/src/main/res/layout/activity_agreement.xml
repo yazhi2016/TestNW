@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.AgreementActivity" >
+
+    <RelativeLayout
+        android:id="@+id/dingweiact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/style_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="关于我们" />
+
+        <RelativeLayout
+            android:id="@+id/around_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dip"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+            android:layout_below="@+id/dingweiact_bar"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:isScrollContainer="true"
+            android:padding="20dp"
+            android:scrollbars="vertical"
+            android:text="1、用户有权拥有其在“掌酒通”的用户名及密码，并用该用户名和密码登录“掌酒通”参与商品购买。用户不得以任何形式转让或授权他人使用自己的“掌酒通”用户名。
+\n2、用户有权根据本协议的规定以及“掌酒通”网站上发布的相关规则在“掌酒通”上查询商品信息、发表使用体验、参与商品讨论、邀请关注好友、上传商品图片、参加“掌酒通”的有关活动，以及享受“掌酒通”提供的其它信息服务 
+\n3、用户有义务在注册时提供自己的真实资料，并保证诸如电子邮件地址、联系电话、联系地址、邮政编码等内容的有效性及真实性，保证“掌酒通”可以通过上述联系方式与用户本人进行联系。同时，用户也有义务在相关资料发生变更时及时更新有关注册资料。用户保证不以他人资料在“掌酒通”进行注册和参与商品分享购买。 
+\n4、用户应当保证在“掌酒通”参与商品分享购买时遵守诚实信用原则，不扰乱网上交易的正常秩序。 
+\n5、用户在成为“掌酒通”的会员后，可按“掌酒通”的福分规则享受福分获得。累积福分可用于福分商城中的相应福分商品兑换。福分规则连同与该规则相关的条款和条件，构成用户与“掌酒通”之间的完整协议。接受本协议，即表明接受福分规则中的条款和条件。 
+\n6、用户享有言论自由权利；并拥有适度修改、删除自己发表的文章的权利用户不得在“掌酒通”发表包含以下内容的言论： 
+\n1) 反对宪法所确定的基本原则，煽动、抗拒、破坏宪法和法律、行政法规实施的； 
+\n2) 煽动颠覆国家政权，推翻社会主义制度，煽动、分裂国家，破坏国家统一的； 
+\n3) 损害国家荣誉和利益的； 
+\n4) 煽动民族仇恨、民族歧视，破坏民族团结的：
+\n5) 任何包含对种族、性别、宗教、地域内容等歧视的； 
+\n6) 捏造或者歪曲事实，散布谣言，扰乱社会秩序的； 
+\n7) 宣扬封建迷信、邪教、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的； 
+\n8) 公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的； 
+\n9) 损害国家机关信誉的； 
+\n10) 其他违反宪法和法律行政法规的。
+ "
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </ScrollView>
+
+</RelativeLayout>

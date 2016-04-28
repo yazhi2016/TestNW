@@ -1,0 +1,303 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    tools:context="com.xmzlb.wine.AllProductActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <RelativeLayout
+        android:id="@+id/rela_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:background="@color/wine"
+        android:paddingBottom="5dp" >
+
+        <RelativeLayout
+            android:id="@+id/rela_search_homefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_bigcorner_white"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/ima_search_homefra"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/searchs" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/ima_search_homefra"
+                android:background="@null"
+                android:ems="10"
+                android:hint="请输入商品名称"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/rela_search" >
+
+        <ListView
+            android:id="@+id/lv_left"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lv_left"
+            android:orientation="horizontal" >
+
+            <com.xmzlb.util.CustomNestRadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/text_default"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="默认"
+                        android:textColor="@color/orange"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/text_default"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/gray" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/text_sale"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:gravity="center"
+                        android:text="销量"
+                        android:textColor="@color/deepgray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/text_sale"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/ima_num"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/price_down" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/text_price"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="价格"
+                        android:textColor="@color/deepgray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/text_price"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/ima_priceup_header6_homefra"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="0dp"
+                        android:src="@drawable/price_down" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/text_people"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="人气"
+                        android:textColor="@color/deepgray"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/text_people"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/ima_pricedown_header6_homefra"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="0dp"
+                        android:src="@drawable/price_down" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray" />
+
+                <RelativeLayout
+                    android:id="@+id/rela_sort"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/textview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/ima_sort"
+                        android:button="@null"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:text="筛选"
+                        android:textColor="@color/selector_deepgray_orange"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@+id/textview"
+                        android:layout_marginTop="0dp"
+                        android:background="@color/gray" />
+
+                    <ImageView
+                        android:id="@+id/ima_sort"
+                        android:layout_width="12dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="0dp"
+                        android:visibility="invisible"
+                        android:src="@drawable/price_down" />
+                </RelativeLayout>
+            </com.xmzlb.util.CustomNestRadioGroup>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gv_right"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linear"
+            android:layout_toRightOf="@+id/lv_left"
+            android:numColumns="2" >
+        </GridView>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gv_right"
+            android:layout_alignTop="@+id/gv_right"
+            android:layout_marginTop="89dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="该类商品空空如也" />
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottomlayout" />
+
+</RelativeLayout>

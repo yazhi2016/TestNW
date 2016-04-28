@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="imasize_chine_ten_homefra">60dp</dimen>
+    <dimen name="chine_ten_homefra">13dp</dimen>
+    <dimen name="btnsize_buy_homefra">22dp</dimen>
+    <dimen name="textsize_bigprice_homefra">22sp</dimen>
+    <dimen name="ima_back_bar_padding">12dip</dimen>
+    <dimen name="ima_whiteback_bar_padding">15dip</dimen>
+    <dimen name="ima_topbar_homefra">45dp</dimen>
+    <dimen name="margintop_topbar_homefra">-5dp</dimen>
+    <dimen name="mainfra_banner_imasize">300dp</dimen>
+    <dimen name="mainfra_imasize">100dp</dimen>
+    <dimen name="mefra_imasize">125dp</dimen>
+    <dimen name="mefra_userima_size">80dp</dimen>
+    <dimen name="mefra_item">40dp</dimen>
+    <dimen name="mefra_item_padding">0dip</dimen>
+    <dimen name="mefra_4_item">60dp</dimen>
+    <dimen name="h_line_size">1dp</dimen>
+    <dimen name="mefra_line_marginleft">20dip</dimen>
+    <dimen name="myinfo_line_marginleft">10dip</dimen>
+    <dimen name="rela_paddingsize_homefra">8dip</dimen>
+    <dimen name="changePwdTextSize">16sp</dimen>
+    <dimen name="pop_myinfo_textsize">16sp</dimen>
+    <dimen name="pop_myinfo_padding">12sp</dimen>
+    <dimen name="detailact_padding">6sp</dimen>
+    <dimen name="padding_topbar_homefra">10sp</dimen>
+    <dimen name="padding1_homefra">7dp</dimen>
+    <dimen name="padding2_homefra">5dp</dimen>
+    <dimen name="padding3_homefra">15dp</dimen>
+    <dimen name="padding4_homefra">2dp</dimen>
+    <dimen name="margin1_homefra">5dp</dimen>
+    <dimen name="margin2_homefra">5dp</dimen>
+    <dimen name="textsize_homefra">15sp</dimen>
+    <dimen name="textsize2_homefra">16sp</dimen>
+    <dimen name="marginright_newdetail">15dp</dimen>
+    <dimen name="textsize_newdetail">15sp</dimen>
+    <dimen name="textsize_registe">13sp</dimen>
+    <dimen name="text_width_register">80dp</dimen>
+    <dimen name="marginleft_register">15dp</dimen>
+    <dimen name="marginright_register">15dp</dimen>
+    <dimen name="margint_eightitem">15dp</dimen>
+    <dimen name="marginbottom_ordercenter">1dp</dimen>
+    <dimen name="textsize_seller">11dp</dimen>
+    <dimen name="textsize_sendact">14dp</dimen>
+    <dimen name="textsize_shopcar">12dp</dimen>
+
+
+</resources>

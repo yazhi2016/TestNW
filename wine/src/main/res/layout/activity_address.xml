@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    tools:context="com.xmzlb.wine.AddressActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/text_uilocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="用户中心 > 收货地址管理" />
+
+    <TextView
+        android:id="@+id/henxian"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/text_uilocation"
+        android:background="@color/gray" />
+
+    <ListView
+        android:id="@+id/adress_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_address"
+        android:layout_below="@+id/henxian"
+        android:layout_centerHorizontal="true"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:scrollbars="none" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/add_address"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_above="@+id/bottombar"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/gold" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="新增收货地址"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottomlayout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="收货地址空空如也"
+        android:id="@+id/text_nothing"
+        android:textSize="18sp"
+        android:textColor="@drawable/black"
+        android:layout_below="@+id/henxian"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="101dp" />
+
+</RelativeLayout>

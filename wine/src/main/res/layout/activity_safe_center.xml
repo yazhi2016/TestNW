@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.xmzlb.wine.SafeCenterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/dingweiact_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="安全中心"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/around_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="5dip"
+                android:src="@drawable/back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/signin_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dingweiact_bar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mefra_item_ba" >
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/return2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/style_safecenter_text"
+            android:text="登陆密码" />
+    </RelativeLayout>
+
+   <include layout="@layout/line2_mefra" />
+
+    <RelativeLayout
+        android:id="@+id/pay_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/henxian"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mefra_item_ba" >
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/return2" />
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/style_safecenter_text"
+            android:text="支付密码" />
+    </RelativeLayout>
+
+   <include layout="@layout/line2_mefra" />
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="15dip" >
+
+        <TextView
+            android:id="@+id/text_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dip"
+            android:layout_marginTop="15dip"
+            android:text="扬州慢"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/text_address_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_address_name"
+            android:layout_alignBottom="@+id/text_address_name"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="18811112222"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/text_address_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_address_name"
+            android:layout_alignRight="@+id/text_address_phone"
+            android:layout_below="@+id/text_address_phone"
+            android:layout_marginTop="8dip"
+            android:text="福建省厦门市思明区望海路67号2105"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/text_address_name"
+            android:layout_marginBottom="3dip"
+            android:layout_marginLeft="5dip"
+            android:layout_toRightOf="@+id/text_address_name"
+            android:background="@color/white"
+            android:paddingLeft="1dip"
+            android:paddingRight="1dip"
+            android:text="默认地址"
+            android:visibility="gone"
+            android:textColor="@color/red"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/text_address_phone"
+            android:layout_below="@+id/text_address_location"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray"
+            android:paddingBottom="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:text="删除"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_address_location"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@+id/text_delete"
+            android:background="@color/wine"
+            android:paddingBottom="3dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="3dp"
+            android:text="修改"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

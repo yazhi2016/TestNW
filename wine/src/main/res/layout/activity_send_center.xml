@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+                android:background="@color/white"
+    tools:context="com.xmzlb.wine.SendOrderActivity" >
+
+    <include
+        android:id="@+id/bar"
+        layout="@layout/toplayout" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="配送中心 > " />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/rela1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/ima1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/waitsend2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima1"
+                android:layout_centerHorizontal="true"
+                android:text="待配送订单"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/ima2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/waitreceive2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima2"
+                android:layout_centerHorizontal="true"
+                android:text="待收货订单"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/ima3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="6dp"
+                android:src="@drawable/waitcalculate" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima3"
+                android:layout_centerHorizontal="true"
+                android:text="待结算订单"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp" >
+
+            <ImageView
+                android:id="@+id/ima4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/waitcount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima4"
+                android:layout_centerHorizontal="true"
+                android:text="已结算订单"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_sendcenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1"
+        android:layout_above="@+id/rela_btn"
+        android:layout_centerHorizontal="true" >
+    </ListView>
+    
+    <RelativeLayout 
+        android:id="@+id/rela_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="25dp"
+        >
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_alignLeft="@+id/rela_userpwd"
+            android:layout_alignRight="@+id/rela_userpwd"
+            android:layout_height="30dp"
+            android:layout_below="@+id/linear2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/selector_corner_gold_gray"
+            android:text="返回配送中心首页"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        
+    </RelativeLayout>
+    
+    
+    <TextView 
+        android:id="@+id/text_nothing"
+        android:layout_below="@+id/linear1"
+        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:text="该类订单空空如也"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        />
+
+</RelativeLayout>

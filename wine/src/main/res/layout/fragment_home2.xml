@@ -1,0 +1,980 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rela_baritem_homefra1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/ima_bar_homefra1"
+                android:layout_width="@dimen/ima_topbar_homefra"
+                android:layout_height="@dimen/ima_topbar_homefra"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_topbar_homefra"
+                android:src="@drawable/all2" />
+
+            <TextView
+                android:id="@+id/text_bar_homefra1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_bar_homefra1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margintop_topbar_homefra"
+                android:text="全部商品"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chine_ten_homefra" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_baritem_homefra2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/ima_bar_homefra2"
+                android:layout_width="@dimen/ima_topbar_homefra"
+                android:layout_height="@dimen/ima_topbar_homefra"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_topbar_homefra"
+                android:src="@drawable/special" />
+
+            <TextView
+                android:id="@+id/text_bar_homefra2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_bar_homefra2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margintop_topbar_homefra"
+                android:text="地区特供"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chine_ten_homefra" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_baritem_homefra3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/ima_bar_homefra3"
+                android:layout_width="@dimen/ima_topbar_homefra"
+                android:layout_height="@dimen/ima_topbar_homefra"
+                android:layout_centerHorizontal="true"
+                android:padding="2dp"
+                android:src="@drawable/logowhite" />
+
+            <TextView
+                android:id="@+id/text_bar_homefra3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_bar_homefra3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margintop_topbar_homefra"
+                android:text="掌酒通"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chine_ten_homefra" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_baritem_homefra4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/ima_bar_homefra4"
+                android:layout_width="@dimen/ima_topbar_homefra"
+                android:layout_height="@dimen/ima_topbar_homefra"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_topbar_homefra"
+                android:src="@drawable/brand" />
+
+            <TextView
+                android:id="@+id/text_bar_homefra4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_bar_homefra4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margintop_topbar_homefra"
+                android:text="品牌导航"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chine_ten_homefra" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_baritem_homefra5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:paddingBottom="5dp" >
+
+            <ImageView
+                android:id="@+id/ima_bar_homefra5"
+                android:layout_width="@dimen/ima_topbar_homefra"
+                android:layout_height="@dimen/ima_topbar_homefra"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/padding_topbar_homefra"
+                android:src="@drawable/me2" />
+
+            <TextView
+                android:id="@+id/text_bar_homefra5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_bar_homefra5"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margintop_topbar_homefra"
+                android:text="用户中心"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chine_ten_homefra" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_top_search_homefra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar"
+        android:background="@color/gold"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/henxian_homefra"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/rela_search_homefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/henxian_homefra"
+            android:layout_margin="5dp"
+            android:background="@drawable/shape_corner_white"
+            android:cursorVisible="true"
+            android:focusableInTouchMode="true" >
+
+            <ImageView
+                android:id="@+id/ima_search_homefra"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:src="@drawable/searchs" />
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text_search"
+                android:layout_toRightOf="@+id/ima_search_homefra"
+                android:background="@null"
+                android:ems="10"
+                android:hint="泸州醇"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/text_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/shape_rightcorner_gold_strokewhite"
+                android:gravity="center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/rela_search_homefra"
+            android:background="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_loacation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar"
+        android:background="@color/white"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView7"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="更改区域  >"
+            android:textColor="@color/black" />
+        
+        <TextView
+            android:id="@+id/textView_nothing"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="该类商品空空如也"
+            android:textSize="18sp"
+            android:textColor="@color/black" />
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:verticalSpacing="5dp" >
+        </GridView>
+    </RelativeLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/scrollviiew"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rela_top_search_homefra"
+        android:background="#ffffff"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/gray"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:scrollbars="none"
+        android:smoothScrollbar="true"
+        app:ptrMode="pullFromStart" >
+
+        <LinearLayout
+            android:id="@+id/sub_root_lin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 动态创建布局开始 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="5dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="205dp"
+                    android:visibility="visible" >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/pager_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="205dp" />
+
+                    <com.xmzlb.util.ViewPagerIndicator2
+                        android:id="@+id/home_headertype_pagerindicator"
+                        android:layout_width="150dp"
+                        android:layout_height="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="-30dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:id="@+id/rela_grape"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView11"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:padding="2dp"
+                            android:src="@drawable/home1" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView11"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="葡萄酒"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_ten"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/home2" />
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="白酒"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_hundred"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/home3" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView3"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="啤酒"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_share"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView4"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/home4" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView4"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="饮料"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <RelativeLayout
+                        android:id="@+id/rela_foreignwine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/ima_foreign_homefra"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:padding="2dp"
+                            android:src="@drawable/delete31" />
+
+                        <TextView
+                            android:id="@+id/text_foreign_homefra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ima_foreign_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="洋酒"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_otherwine"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/delete41" />
+
+                        <TextView
+                            android:id="@+id/text_other_homefra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView22"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="其他酒"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_milk"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView32"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/delete51" />
+
+                        <TextView
+                            android:id="@+id/text_milk_homefra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView32"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="牛奶·水"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rela_food"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="@dimen/rela_paddingsize_homefra" >
+
+                        <ImageView
+                            android:id="@+id/imageView42"
+                            android:layout_width="@dimen/imasize_chine_ten_homefra"
+                            android:layout_height="@dimen/imasize_chine_ten_homefra"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/delete61" />
+
+                        <TextView
+                            android:id="@+id/textView52"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imageView42"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="8dp"
+                            android:text="休闲食品"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/chine_ten_homefra" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="6dp"
+                    android:paddingTop="5dp"
+                    android:text="热卖促销"
+                    android:textColor="@color/red"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:visibility="visible" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ima_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        fresco:placeholderImage="@drawable/white"/>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0"
+                        android:visibility="visible"
+                        android:id="@+id/relativeLayout">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="20dp" >
+
+                            <com.xmzlb.util.RushBuyCountDownTimerView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rushBuyCountDownTimerView"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" >
+
+                    <com.xmzlb.util.SquareLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="2dp" >
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/ima_promote1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            fresco:placeholderImage="@drawable/white"/>
+                    </com.xmzlb.util.SquareLayout>
+
+                    <TextView
+                        android:layout_width="3dp"
+                        android:layout_height="3dp"
+                        android:background="@color/white" />
+
+                    <com.xmzlb.util.SquareLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical" >
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/ima_promote2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:layout_weight="1"
+                                fresco:placeholderImage="@drawable/white"/>
+
+                            <TextView
+                                android:layout_width="3dp"
+                                android:layout_height="3dp" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/ima_promote3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:layout_weight="1"
+                                fresco:placeholderImage="@drawable/white"/>
+                        </LinearLayout>
+                    </com.xmzlb.util.SquareLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="新品上市"
+                    android:textColor="@color/red"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ima_new1"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        android:layout_weight="1"
+                        fresco:placeholderImage="@drawable/white"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="35dp"
+                    android:background="@drawable/henxian" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ima_new2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        fresco:placeholderImage="@drawable/white"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gold" />
+
+                <com.xmzlb.util.PercentRelativeLayout
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:visibility="visible" >
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ima_new3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentLeft="true"
+                        app:layout_heightPercent="37%w"
+                        app:layout_marginPercent="2%"
+                        app:layout_widthPercent="47.5%w"
+                        fresco:placeholderImage="@drawable/white"/>
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/ima_new4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:scaleType="fitXY"
+                        android:layout_alignParentRight="true"
+                        app:layout_heightPercent="37%w"
+                        app:layout_marginPercent="2%"
+                        app:layout_widthPercent="47.5%w"
+                        fresco:placeholderImage="@drawable/white"/>
+                </com.xmzlb.util.PercentRelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp" >
+
+                    <TextView
+                        android:id="@+id/text_floor_item_title_homefar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="1F  白酒精选"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/more1"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gold" >
+
+                        <TextView
+                            android:id="@+id/text_more_itemtitle_homefra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/ima_more_homefra"
+                            android:text="更多More"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ima_more_homefra"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/more" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.xinbo.widget.GridView4ScrollView
+                    android:id="@+id/gv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" >
+                </com.xinbo.widget.GridView4ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp" >
+
+                    <TextView
+                        android:id="@+id/text_floor_item_title_homefar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="2F  红酒（洋酒）精选"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/more2"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gold" >
+
+                        <TextView
+                            android:id="@+id/text_more_itemtitle_homefra2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/ima_more_homefra2"
+                            android:text="更多More"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ima_more_homefra2"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/more" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.xinbo.widget.GridView4ScrollView
+                    android:id="@+id/gv2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" >
+                </com.xinbo.widget.GridView4ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding1_homefra" >
+
+                    <TextView
+                        android:id="@+id/text_floor_item_title_homefar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="3F  啤酒（饮料）精选"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/more3"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gold" >
+
+                        <TextView
+                            android:id="@+id/text_more_itemtitle_homefra3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/ima_more_homefra3"
+                            android:text="更多More"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ima_more_homefra3"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/more" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.xinbo.widget.GridView4ScrollView
+                    android:id="@+id/gv3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" >
+                </com.xinbo.widget.GridView4ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding1_homefra" >
+
+                    <TextView
+                        android:id="@+id/text_floor_item_title_homefar4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="4F  其他精选"
+                        android:textColor="@color/red"
+                        android:textSize="20sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/more4"
+                        android:layout_width="110dp"
+                        android:layout_height="25dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/gold" >
+
+                        <TextView
+                            android:id="@+id/text_more_itemtitle_homefra4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:layout_toLeftOf="@+id/ima_more_homefra4"
+                            android:text="更多More"
+                            android:textColor="@color/white"
+                            android:textSize="16sp" />
+
+                        <ImageView
+                            android:id="@+id/ima_more_homefra4"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/more" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <com.xinbo.widget.GridView4ScrollView
+                    android:id="@+id/gv4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:horizontalSpacing="5dp"
+                    android:numColumns="2"
+                    android:verticalSpacing="5dp" >
+                </com.xinbo.widget.GridView4ScrollView>
+            </LinearLayout>
+            <!-- 动态创建布局结束 -->
+
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</RelativeLayout>

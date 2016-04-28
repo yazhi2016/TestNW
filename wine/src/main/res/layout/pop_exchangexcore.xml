@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/halflucency4" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/white" >
+
+        <ImageView
+            android:id="@+id/ima_close"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:src="@drawable/close2" />
+
+        <ImageView
+            android:id="@+id/ima_question"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:src="@drawable/question" />
+
+        <RelativeLayout
+            android:id="@+id/rela_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="60dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/text_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="我们的客服将与您联系，敬请等候！"
+                android:textColor="@color/blue"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/text_center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/wine"
+                android:text="关闭"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/text_center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/smile" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageView1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="兑换成功！"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_scoreNotEnough"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="60dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/text_center2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="我们的客服将与您联系，敬请等候！"
+                android:textColor="@color/blue"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" >
+
+                <TextView
+                    android:id="@+id/textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="继续努力哦！"
+                    android:textColor="@color/blue" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_toRightOf="@+id/textview"
+                    android:src="@drawable/smile" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_close2"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/text_center2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/wine"
+                android:text="关闭"
+                android:textColor="@color/white"
+                android:textSize="13dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/text_center2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/smile"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="积分不足"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
+                android:text="所需积分：" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
+                android:text="您的积分：" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_comfirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="visible"
+            android:layout_marginTop="60dp" >
+
+            <TextView
+                android:id="@+id/text_center3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="我们的客服将与您联系，敬请等候！"
+                android:textColor="@color/blue"
+                android:textSize="13sp"
+                android:visibility="invisible" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/text_center3"
+                android:layout_marginTop="25dp" >
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/wine"
+                    android:text="取消"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/btn_comfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@+id/btn_cancel"
+                    android:background="@drawable/wine"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="13dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_above="@+id/text_center3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/smile"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/imageView3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="确认兑换？"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="-10dp"
+                android:layout_centerHorizontal="true"
+                android:text="所需积分：" />
+
+            <RelativeLayout
+                android:id="@+id/rela1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/textView6"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <TextView
+                    android:id="@+id/nowPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="当前积分：" />
+
+                <TextView
+                    android:id="@+id/nowRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="当前等级：" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela1"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp" >
+
+                <TextView
+                    android:id="@+id/afterPoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="兑后积分：" />
+
+                <TextView
+                    android:id="@+id/afterRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="兑后等级：" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:text="新品上市"
+                    android:textColor="@color/red"
+                    android:textSize="20dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:id="@+id/ima_new1"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:id="@+id/ima_new2"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gold" />
+
+                <com.xmzlb.util.PercentRelativeLayout
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/white"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:id="@+id/ima_new3"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentLeft="true"
+                        app:layout_heightPercent="33%w"
+                        app:layout_marginPercent="2%"
+                        app:layout_widthPercent="47.5%w"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/white" />
+
+                    <ImageView
+                        android:id="@+id/ima_new4"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentRight="true"
+                        app:layout_heightPercent="33%w"
+                        app:layout_marginPercent="2%"
+                        app:layout_widthPercent="47.5%w"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/white" />
+                </com.xmzlb.util.PercentRelativeLayout>
+
+</RelativeLayout>

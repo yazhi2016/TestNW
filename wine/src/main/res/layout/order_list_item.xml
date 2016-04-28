@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <ImageView
+            android:id="@+id/ima_shop_listitem"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="6dip"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="6dip"
+            android:layout_toRightOf="@+id/radiobtn_shop_item"
+            android:scaleType="fitXY"
+            android:src="@drawable/white" />
+
+        <TextView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="1dip"
+            android:layout_below="@+id/ima_shop_listitem"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/text_shop_listitem_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ima_shop_listitem"
+            android:layout_marginLeft="5dip"
+            android:layout_marginTop="2dip"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@+id/text_shop_listitem_num"
+            android:layout_toRightOf="@+id/ima_shop_listitem"
+            android:text="欧美个性拼接中长款风衣2015秋冬新款鹿皮绒宽松短外套女"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/text_shop_listitem_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ima_shop_listitem"
+            android:layout_alignLeft="@+id/text_shop_listitem_product"
+            android:text="￥1342"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/text_shop_listitem_size"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text_shop_listitem_price"
+            android:layout_alignRight="@+id/text_shop_listitem_product"
+            android:layout_marginBottom="2dip"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_alignLeft="@+id/text_shop_listitem_price"
+            android:text="颜色分类：060棕色；尺码：165/85A/M"
+            android:textSize="11sp" />
+
+        
+
+        <TextView
+            android:id="@+id/text_shop_listitem_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="x1"
+            android:gravity="center"
+            android:layout_marginRight="10dip"
+            android:textColor="@color/black" />
+
+        
+
+       
+
+    </RelativeLayout>
+
+</RelativeLayout>

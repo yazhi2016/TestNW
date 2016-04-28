@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rela1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/gvitem_mycollected_ima"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/white" />
+
+        <TextView
+            android:id="@+id/text_name_gvitem_mycollected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gvitem_mycollected_ima"
+            android:layout_alignRight="@+id/gvitem_mycollected_ima"
+            android:layout_below="@+id/gvitem_mycollected_ima"
+            android:layout_marginTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="3dp"
+            android:paddingTop="3dp"
+            android:singleLine="true"
+            android:text="甜美学院红色毛呢外套 双排扣中长款A字"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/text_price_gvitem_mycollected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_name_gvitem_mycollected"
+            android:layout_below="@+id/text_name_gvitem_mycollected"
+            android:paddingLeft="3dp"
+            android:text="￥：12345"
+            android:layout_marginBottom="3dp"
+            android:textColor="@color/color_shop_item_price"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/text_price_gvitem_mycollected"
+            android:src="@drawable/dashed2" />
+
+         <CheckBox
+            android:id="@+id/checkb_gvitem_mycollected"
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@+id/gvitem_mycollected_ima"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"
+            android:button="@drawable/selector_check_gray_gray" />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

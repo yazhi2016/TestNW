@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/linear_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/wine"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rela_menu1"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:onClick="menu1"
+            android:background="@drawable/tab_bg" >
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_img"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="首页"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/item_img"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/home" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_menu2"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:onClick="menu2"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg" >
+
+            <TextView
+                android:id="@+id/text_shopcar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_shopcar"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="购物车"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/ima_shopcar"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopcar" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_menu3"
+            android:layout_width="fill_parent"
+            android:onClick="menu3"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg" >
+
+            <TextView
+                android:id="@+id/text_ordercenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_ordercenter"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="订单中心"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/ima_ordercenter"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ordercenter" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_menu4"
+            android:layout_width="fill_parent"
+            android:onClick="menu4"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg" >
+
+            <TextView
+                android:id="@+id/text_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ima_sale"
+                android:layout_centerInParent="true"
+                android:drawablePadding="4dp"
+                android:gravity="center_horizontal"
+                android:paddingBottom="4dip"
+                android:paddingTop="2dip"
+                android:text="用户中心"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/ima_sale"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dip"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/me2" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_empty_meun"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/linear_bottombar"
+        android:onClick="menuempty"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" >
+    </RelativeLayout>
+
+</RelativeLayout>

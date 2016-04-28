@@ -1,0 +1,460 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xmzlb.wine.UserCenterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/top" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="用户中心"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rela_nologin_mefra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/bar"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/rela_top_mefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_topcorner_strokegray_white"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/user" />
+
+            <EditText
+                android:id="@+id/edit_name_mefra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/imageView12"
+                android:background="@null"
+                android:ems="10"
+                android:hint="手机号/邮箱/昵称" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela_top2_mefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_top_mefra"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-1dp"
+            android:background="@drawable/shape_bottomcorner_strokegray_white"
+            android:padding="10dp" >
+
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/pwd" />
+
+            <EditText
+                android:id="@+id/edit_pwd_mefra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/imageView13"
+                android:background="@null"
+                android:ems="10"
+                android:hint="密码" >
+            </EditText>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login_mefra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rela_top2_mefra"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/selector_corner_gold_gray"
+            android:text="登陆"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_login_mefra"
+            android:background="@drawable/lucency" >
+
+            <TextView
+                android:id="@+id/text_forgetPwd_mefra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_toLeftOf="@+id/shuxian_mefra"
+                android:padding="10dp"
+                android:text="忘记密码？"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/shuxian_mefra"
+                android:layout_width="0.5dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/text_signup_mefra"
+                android:background="@color/black" />
+
+            <TextView
+                android:id="@+id/text_signup_mefra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:padding="10dp"
+                android:text="新用户注册"
+                android:textColor="@color/black"
+                android:textSize="13sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview_mefra"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/bar"
+        android:scrollbars="none"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/dingweiact_bar"
+            android:background="#EEEDF2"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mefra_imasize"
+                android:background="@color/gold" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="center"
+                        android:src="@drawable/black" />
+                </RelativeLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/mefra_userima_size"
+                    android:layout_height="@dimen/mefra_userima_size"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/white" />
+
+                <TextView
+                    android:id="@+id/text_username_useract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:text="掌酒通"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_allorder_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_allorder_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="全部订单" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/return2" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <RelativeLayout
+                    android:id="@+id/mefra_waitpay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dip" >
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        style="@style/style_mefra_4item_ima"
+                        android:src="@drawable/forthepayment2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView6"
+                        android:layout_centerHorizontal="true"
+                        android:text="待付款"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mefra_wait_receive"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        style="@style/style_mefra_4item_ima"
+                        android:src="@drawable/wait_receive" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView7"
+                        android:layout_centerHorizontal="true"
+                        android:text="待收货"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mefra_return_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        style="@style/style_mefra_4item_ima"
+                        android:src="@drawable/back_white" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView8"
+                        android:layout_centerHorizontal="true"
+                        android:text="退货单"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mefra_estimate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="5dp" >
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        style="@style/style_mefra_4item_ima"
+                        android:src="@drawable/wait_estimate" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/imageView9"
+                        android:layout_centerHorizontal="true"
+                        android:text="待评价"
+                        android:textColor="@color/black" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_myinfo_usercenterfra"
+                android:layout_marginTop="20dp"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/mefra_collected_text"
+                    style="@style/style_mefra_item_text"
+                    android:text="我的信息" />
+            </RelativeLayout>
+            
+             <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_center_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_center_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="中心首页" />
+            </RelativeLayout>
+
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_returngood_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_returngood_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="退换货管理" />
+            </RelativeLayout>
+
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_mycollect_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_mycollectr_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="我的收藏" />
+            </RelativeLayout>
+            
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_changepwd_usercenterfra"
+                style="@style/mefra_item">
+
+                <TextView
+                    android:id="@+id/text_changepwd_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="修改密码" />
+            </RelativeLayout>
+
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_myadress_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_myadress_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="我的收货地址" />
+            </RelativeLayout>
+
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_aboutus_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_aboutus_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="关于我们" />
+            </RelativeLayout>
+            <include layout="@layout/line2_mefra" />
+
+            <RelativeLayout
+                android:id="@+id/rela_helpcenter_usercenterfra"
+                style="@style/mefra_item" >
+
+                <TextView
+                    android:id="@+id/text_helpcenter_usercenterfra"
+                    style="@style/style_mefra_item_text"
+                    android:text="帮助中心" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:paddingBottom="20dip"
+                android:paddingLeft="30dip"
+                android:paddingRight="30dip"
+                android:paddingTop="20dip" >
+
+                <RelativeLayout
+                    android:id="@+id/rela_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_corner_gold" >
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/textView21"
+                        android:src="@drawable/exit" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="退出"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
