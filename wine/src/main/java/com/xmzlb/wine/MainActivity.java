@@ -27,6 +27,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
     public LayoutInflater inflater;
     private int nowTabHost;
     private Bundle bundle;
+    private Bundle bundle2;
 
     MyHandler mMyHandler = new MyHandler(this);
 
@@ -67,7 +68,17 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                         bundle.putInt("item", 0);
                     }
                 }, 500); //0.5秒后将item清空
+            } else if(intent.getIntExtra("tabhost", -1) == 6) { // 进入商场指南中相应版块
+                int intExtra = intent.getIntExtra("item", -1);
+                bundle2.putInt("item", intExtra);
+                mTabHost.setCurrentTab(3);
 
+                mMyHandler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        bundle2.putInt("item", 0);
+                    }
+                }, 500); //0.5秒后将item清空
             } else { //出入tabhost值在0-3之间，则进入相应的版块
                 nowTabHost = intent.getIntExtra("tabhost", -1);
                 mTabHost.setCurrentTab(nowTabHost);
@@ -100,6 +111,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         mTabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
 
         bundle = new Bundle();
+        bundle2 = new Bundle();
         inflater = getLayoutInflater();
         addTab("首页", R.drawable.home, HomeFragment.class);
         addTab("购物车", R.drawable.shopcar, ShopCarFragment.class);
@@ -113,13 +125,20 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         imageview.setImageResource(R.drawable.ordercenter);
         mTabHost.addTab(mTabHost.newTabSpec("订单中心").setIndicator(tabItem1), AllProductFragment.class, bundle);
 
-        addTab("商场指南", R.drawable.guide, UserCenterFragment.class);
+        View tabItem2 = inflater.inflate(R.layout.tab_item, null);
+        TextView textView2 = (TextView) tabItem2.findViewById(R.id.item_name);
+        textView2.setText("商场指南");
+        ImageView imageview2 = (ImageView) tabItem2.findViewById(R.id.item_img);
+        imageview2.setImageResource(R.drawable.guide);
+        mTabHost.addTab(mTabHost.newTabSpec("商场指南").setIndicator(tabItem2), UserCenterFragment.class, bundle2);
+
+//        addTab("商场指南", R.drawable.guide, UserCenterFragment.class);
         addTab("我要供货", R.drawable.sale, UserCenterFragment.class);
         mTabHost.getTabWidget().getChildTabViewAt(4).setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SupplyActivity.class);
+                Intent intent = new Intent(MainActivity.this, IWantSupply.class);
                 startActivity(intent);
             }
         });
@@ -137,7 +156,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0 && this.isTaskRoot()) {
             Intent intent = new Intent(Intent.ACTION_MAIN);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.addCategory(Intent.CATEGORY_HOME);
@@ -146,4 +165,15 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         }
         return super.onKeyDown(keyCode, event);
     }
+
+    public void mainCall() {
+        mTabHost.getTabWidget().getChildTabViewAt(0).callOnClick();
+    }
+    public void shopCall() {
+       mTabHost.getTabWidget().getChildTabViewAt(1).callOnClick();
+    }
+    public void orderCenterCall() {
+       mTabHost.getTabWidget().getChildTabViewAt(2).callOnClick();
+    }
+
 }

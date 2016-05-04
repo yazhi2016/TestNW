@@ -161,7 +161,6 @@ public class OrderDetailActivity extends BaseActivity {
 		case R.id.tab_item1: // 点击底栏首页
 			popupWindowMenu.dismiss();
 			Intent intent_menu1 = new Intent(OrderDetailActivity.this, MainActivity.class);
-			intent_menu1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu1.putExtra("tabhost", 0);
 			startActivity(intent_menu1);
 			break;
@@ -169,7 +168,6 @@ public class OrderDetailActivity extends BaseActivity {
 		case R.id.tab_item2: // 点击底栏购物车
 			popupWindowMenu.dismiss();
 			Intent intent_menu2 = new Intent(OrderDetailActivity.this, MainActivity.class);
-			intent_menu2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu2.putExtra("tabhost", 1);
 			startActivity(intent_menu2);
 			break;
@@ -177,7 +175,6 @@ public class OrderDetailActivity extends BaseActivity {
 		case R.id.tab_item3: // 点击底栏订单中心
 			popupWindowMenu.dismiss();
 			Intent intent_menu3 = new Intent(OrderDetailActivity.this, MainActivity.class);
-			intent_menu3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu3.putExtra("tabhost", 2);
 			startActivity(intent_menu3);
 			break;
@@ -188,14 +185,11 @@ public class OrderDetailActivity extends BaseActivity {
 			break;
 		case R.id.tab_item4: // 点击底栏商场指南
 			Intent intent_tab4 = new Intent(OrderDetailActivity.this, MainActivity.class);
-			intent_tab4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_tab4.putExtra("tabhost", 3);
 			startActivity(intent_tab4);
 			break;
 		case R.id.tab_item5: // 点击底栏我要供货
-			Intent intent_tab5 = new Intent(OrderDetailActivity.this, MainActivity.class);
-			intent_tab5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			intent_tab5.putExtra("tabhost", 4);
+			Intent intent_tab5 = new Intent(OrderDetailActivity.this, IWantSupply.class);
 			startActivity(intent_tab5);
 			break;
 		case R.id.rela_empty_meun:

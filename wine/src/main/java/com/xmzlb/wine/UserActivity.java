@@ -165,28 +165,24 @@ public class UserActivity extends BaseActivity {
                 break;
             case R.id.rela1: // 待付款
                 Intent intent11 = new Intent(UserActivity.this, MainActivity.class);
-                intent11.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent11.putExtra("tabhost", 5);
                 intent11.putExtra("item", 0);
                 startActivity(intent11);
                 break;
             case R.id.rela2: // 待发货
                 Intent intent12 = new Intent(UserActivity.this, MainActivity.class);
-                intent12.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent12.putExtra("tabhost", 5);
+                intent12.putExtra("tabhost", 6);
                 intent12.putExtra("item", 1);
                 startActivity(intent12);
                 break;
             case R.id.rela3:
                 Intent intent13 = new Intent(UserActivity.this, MainActivity.class);
-                intent13.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent13.putExtra("tabhost", 5);
                 intent13.putExtra("item", 1);
                 startActivity(intent13);
                 break;
             case R.id.rela4:
                 Intent intent14 = new Intent(UserActivity.this, MainActivity.class);
-                intent14.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent14.putExtra("tabhost", 5);
                 intent14.putExtra("item", 0);
                 startActivity(intent14);
@@ -229,28 +225,24 @@ public class UserActivity extends BaseActivity {
                 // startActivity(new Intent(UserActivity.this,
                 // AllOrderActivity.class));
                 Intent intent3 = new Intent(UserActivity.this, MainActivity.class);
-                intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent3.putExtra("tabhost", 2);
                 startActivity(intent3);
                 break;
             case R.id.tab_item1: // 点击底栏首页
             case R.id.rela_menu1:
                 Intent intent = new Intent(UserActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.putExtra("tabhost", 0);
                 startActivity(intent);
                 break;
             case R.id.tab_item2: // 点击底栏购物车
             case R.id.rela_menu2:
                 Intent intent2 = new Intent(UserActivity.this, MainActivity.class);
-                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent2.putExtra("tabhost", 1);
                 startActivity(intent2);
                 break;
             case R.id.tab_item3: // 点击底栏订单中心
             case R.id.rela_menu3:
                 Intent intent0 = new Intent(UserActivity.this, MainActivity.class);
-                intent0.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent0.putExtra("tabhost", 2);
                 startActivity(intent0);
                 break;
@@ -260,14 +252,13 @@ public class UserActivity extends BaseActivity {
                 break;
             case R.id.tab_item4: // 点击底栏商场指南
                 Intent intent4 = new Intent(UserActivity.this, MainActivity.class);
-                intent4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent4.putExtra("tabhost", 3);
                 startActivity(intent4);
                 break;
             case R.id.tab_item5: // 点击底栏我要供货
-                Intent intent5 = new Intent(UserActivity.this, MainActivity.class);
-                intent5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent5.putExtra("tabhost", 4);
+                Intent intent5 = new Intent(UserActivity.this, IWantSupply.class);
+//                intent5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                intent5.putExtra("tabhost", 4);
                 startActivity(intent5);
                 break;
             case R.id.imageView3: //

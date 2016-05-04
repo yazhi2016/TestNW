@@ -204,54 +204,45 @@ public class NewDetailActivity extends BaseActivity {
             case R.id.tab_item1: // 点击底栏首页
                 popupWindowMenu.dismiss();
                 Intent intent_menu11 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu11.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu11.putExtra("tabhost", 0);
                 startActivity(intent_menu11);
                 break;
             case R.id.tab_item2: // 点击底栏购物车
                 popupWindowMenu.dismiss();
                 Intent intent_menu22 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu22.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu22.putExtra("tabhost", 1);
                 startActivity(intent_menu22);
                 break;
             case R.id.tab_item3: // 点击底栏订单中心
                 popupWindowMenu.dismiss();
                 Intent intent_menu33 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu33.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu33.putExtra("tabhost", 2);
                 startActivity(intent_menu33);
                 break;
             case R.id.tab_item4: // 点击底栏商场指南
                 Intent intent_tab44 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_tab44.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_tab44.putExtra("tabhost", 3);
                 startActivity(intent_tab44);
                 break;
             case R.id.tab_item5: // 点击底栏我要供货
-                Intent intent_tab55 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_tab55.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent_tab55.putExtra("tabhost", 4);
+                Intent intent_tab55 = new Intent(NewDetailActivity.this, IWantSupply.class);
                 startActivity(intent_tab55);
                 break;
             case R.id.rela_menu1:
                 popupWindowMenu.dismiss();
                 Intent intent_menu1 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu1.putExtra("tabhost", 0);
                 startActivity(intent_menu1);
                 break;
             case R.id.rela_menu2:
                 popupWindowMenu.dismiss();
                 Intent intent_menu2 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu2.putExtra("tabhost", 1);
                 startActivity(intent_menu2);
                 break;
             case R.id.rela_menu3:
                 popupWindowMenu.dismiss();
                 Intent intent_menu3 = new Intent(NewDetailActivity.this, MainActivity.class);
-                intent_menu3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu3.putExtra("tabhost", 2);
                 startActivity(intent_menu3);
                 break;

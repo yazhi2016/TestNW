@@ -39,6 +39,7 @@ public class StartActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
         // 友盟上传错误日志
         MobclickAgent.setCatchUncaughtExceptions(true);
 
@@ -95,6 +96,7 @@ public class StartActivity extends BaseActivity {
                     }
                 } else { // 如果还未登陆
                     Intent intent = new Intent(StartActivity.this, UserLogInActivity.class);
+                    intent.putExtra("isFromStart", 5);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                     finish();

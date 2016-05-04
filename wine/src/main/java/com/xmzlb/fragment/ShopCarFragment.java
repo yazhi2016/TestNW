@@ -73,6 +73,7 @@ public class ShopCarFragment extends Fragment implements OnClickListener {
     private PopupWindow popupWindowMenu; // 菜单弹窗
     private TextView text_topbar;
     private int goodNumMapSize;
+    private MainActivity mActivity;
 
     public ShopCarFragment() {
     }
@@ -82,6 +83,7 @@ public class ShopCarFragment extends Fragment implements OnClickListener {
         if (view == null) {
             this.inflater = inflater;
             view = inflater.inflate(R.layout.fragment_shop_car, container, false);
+            mActivity = (MainActivity) getActivity();
             imageOptions = new ImageOptions.Builder().setSize(DensityUtil.dip2px(200), DensityUtil.dip2px(200))
                     // .setRadius(DensityUtil.dip2px(5))
                     // 如果ImageView的大小不是定义为wrap_content, 不要crop.
@@ -234,7 +236,11 @@ public class ShopCarFragment extends Fragment implements OnClickListener {
 
         view.findViewById(R.id.rele_menu_detailact).setOnClickListener(this);
         view.findViewById(R.id.back).setOnClickListener(this);
-        view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        if(getActivity().isTaskRoot()) {
+            view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        } else {
+            view.findViewById(R.id.back).setVisibility(View.VISIBLE);
+        }
         popMenu.findViewById(R.id.rela_menu1).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu2).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu3).setOnClickListener(this);
@@ -495,27 +501,18 @@ public class ShopCarFragment extends Fragment implements OnClickListener {
                 popupWindowMenu.dismiss();
                 break;
             case R.id.back:
-                Intent intent0 = new Intent(getActivity(), MainActivity.class);
-                intent0.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent0.putExtra("tabhost", 0);
-                startActivity(intent0);
+                getActivity().finish();
                 break;
             case R.id.rela_menu1:
                 popupWindowMenu.dismiss();
-                Intent intent2 = new Intent(getActivity(), MainActivity.class);
-                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent2.putExtra("tabhost", 0);
-                startActivity(intent2);
+                mActivity.mainCall();
                 break;
             case R.id.rela_menu2:
                 popupWindowMenu.dismiss();
                 break;
             case R.id.rela_menu3:
                 popupWindowMenu.dismiss();
-                Intent intent21 = new Intent(getActivity(), MainActivity.class);
-                intent21.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent21.putExtra("tabhost", 2);
-                startActivity(intent21);
+                mActivity.orderCenterCall();
                 break;
             case R.id.rela_menu4:
                 popupWindowMenu.dismiss();

@@ -106,6 +106,9 @@ public class RegisterActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.back:
+                finish();
+                break;
             case R.id.text_getSMS: //短信验证
                 String phone2 = edit_phone.getText().toString();
                 if (phone2.isEmpty()) {
@@ -402,6 +405,7 @@ public class RegisterActivity extends BaseActivity {
         findViewById(R.id.rela_xian).setOnClickListener(this);
         findViewById(R.id.btn_login_mefra).setOnClickListener(this);
         findViewById(R.id.text_getSMS).setOnClickListener(this);
+        findViewById(R.id.back).setOnClickListener(this);
     }
 
     @Override

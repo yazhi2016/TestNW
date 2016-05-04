@@ -1161,7 +1161,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
                     }
 
                     View view3 = dialogm();
-                    final MyAlertDialog dialog3 = new MyAlertDialog(getActivity()).builder().setTitle("修改现居地")
+                    final MyAlertDialog dialog3 = new MyAlertDialog(getActivity()).builder().setTitle("修改地区")
                             .setView(view3).setNegativeButton("取消", new OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -1205,7 +1205,7 @@ public class HomeFragment extends Fragment implements OnClickListener {
                     }
 
                     View view3 = dialogm();
-                    final MyAlertDialog dialog3 = new MyAlertDialog(getActivity()).builder().setTitle("修改现居地")
+                    final MyAlertDialog dialog3 = new MyAlertDialog(getActivity()).builder().setTitle("修改地区")
                             .setView(view3).setNegativeButton("取消", new OnClickListener() {
                                 @Override
                                 public void onClick(View v) {

@@ -46,7 +46,7 @@
             android:textSize="13sp" />
 
         <Button
-            android:id="@+id/btn_changeIma"
+            android:id="@+id/btn_changeIma2"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_alignParentRight="true"
@@ -56,6 +56,7 @@
             android:background="@color/wine"
             android:gravity="center"
             android:text="新增申请"
+            android:visibility="invisible"
             android:textColor="@color/white"
             android:textSize="14sp" />
     </RelativeLayout>
@@ -70,7 +71,7 @@
         android:layout_weight="1" >
 
         <Button
-            android:id="@+id/btn_login_mefra"
+            android:id="@+id/btn_changeIma"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
@@ -80,7 +81,7 @@
             android:background="@drawable/selector_corner_gold_gray"
             android:paddingBottom="5dp"
             android:paddingTop="5dp"
-            android:text="申请处理中"
+            android:text="新增申请"
             android:textColor="@color/white"
             android:textSize="14sp" />
     </RelativeLayout>

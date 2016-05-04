@@ -65,7 +65,7 @@ public class YazhiHttp {
         x.http().post(requestParams, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String arg0) {
-                if(arg0.contains("succeed")) {
+                if(arg0.contains("succeed") && context != null) {
                     Integer succeed = GsonUtils.parseJSON(arg0, Succeed.class).getStatus().getSucceed();
                     if (succeed == 2) { //账号已过期
                         context.startActivity(new Intent(context, UserLogInActivity.class));

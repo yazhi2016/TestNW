@@ -134,7 +134,7 @@ public class ComfirmOrderActivity extends BaseActivity {
                     if (rankName.contains("普通会员")) { // 普通会员，小于1000是线下先付
                         payMode = 0;
                         if (allMoney > 1000) {
-                            textvie6.setText("物流保证金");
+                            textvie6.setText("物流保证金 10%");
                         } else {
                             textvie6.setText("线下先付");
                         }
@@ -370,6 +370,12 @@ public class ComfirmOrderActivity extends BaseActivity {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.text_guide: //跳转商城指南
+                Intent intent12 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
+                intent12.putExtra("tabhost", 6);
+                intent12.putExtra("item", 1);
+                startActivity(intent12);
+                break;
             case R.id.radio0:
                 payMoneyMode = 0;
                 break;
@@ -383,7 +389,6 @@ public class ComfirmOrderActivity extends BaseActivity {
             case R.id.tab_item1: // 点击底栏首页
                 popupWindowMenu.dismiss();
                 Intent intent_menu1 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
-                intent_menu1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu1.putExtra("tabhost", 0);
                 startActivity(intent_menu1);
                 break;
@@ -391,7 +396,6 @@ public class ComfirmOrderActivity extends BaseActivity {
             case R.id.tab_item2: // 点击底栏购物车
                 popupWindowMenu.dismiss();
                 Intent intent_menu2 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
-                intent_menu2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu2.putExtra("tabhost", 1);
                 startActivity(intent_menu2);
                 break;
@@ -399,7 +403,6 @@ public class ComfirmOrderActivity extends BaseActivity {
             case R.id.tab_item3: // 点击底栏订单中心
                 popupWindowMenu.dismiss();
                 Intent intent_menu3 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
-                intent_menu3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu3.putExtra("tabhost", 2);
                 startActivity(intent_menu3);
                 break;
@@ -410,14 +413,11 @@ public class ComfirmOrderActivity extends BaseActivity {
                 break;
             case R.id.tab_item4: // 点击底栏商场指南
                 Intent intent_tab4 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
-                intent_tab4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_tab4.putExtra("tabhost", 3);
                 startActivity(intent_tab4);
                 break;
             case R.id.tab_item5: // 点击底栏我要供货
-                Intent intent_tab5 = new Intent(ComfirmOrderActivity.this, MainActivity.class);
-                intent_tab5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent_tab5.putExtra("tabhost", 4);
+                Intent intent_tab5 = new Intent(ComfirmOrderActivity.this, IWantSupply.class);
                 startActivity(intent_tab5);
                 break;
             case R.id.rela_empty_meun:
@@ -632,6 +632,8 @@ public class ComfirmOrderActivity extends BaseActivity {
 
             }
         });
+
+        findViewById(R.id.text_guide).setOnClickListener(this);
     }
 
     class LvAdapter extends BaseAdapter {

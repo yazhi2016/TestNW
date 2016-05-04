@@ -3,6 +3,7 @@ package com.xmzlb.wine;
 import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -27,6 +28,7 @@ import com.xmzlb.model.Status;
 import com.xmzlb.registermodel.Data2;
 import com.xmzlb.registermodel.Userinfo;
 import com.xmzlb.variable.GlobalVariable;
+import com.xmzlb.wine.databinding.ActivityScoreBinding;
 import com.xmzlb.zyzutil.YazhiHttp;
 
 import org.xutils.common.Callback.CommonCallback;
@@ -52,26 +54,21 @@ public class ScoreActivity extends BaseActivity {
 	private LvAddAdapter lvAddAdapter;
 	private LvLoseAdapter lvLoseAdapter;
 	private ImageView imageView3;
-	private TextView textView61;
-	private TextView text_rank;
-	private TextView textView51;
-	private TextView text_name;
 	String type = "1"; // 1增分记录，0减分记录
 	private String spSid;
 	ArrayList<Datum8> list = new ArrayList<Datum8>();
-	private TextView text_score;
-	private TextView text_level;
 
 	View popMenu;
 	private PopupWindow popupWindowMenu; // 菜单弹窗
 	private View bar;
 	String picPath = "";
 	public static final int TO_SELECT_PHOTO = 3;
+    private ActivityScoreBinding mBinding;
 
-	@Override
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_score);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_score);
 		initViews();
 		initEvents();
 		init();
@@ -135,13 +132,8 @@ public class ScoreActivity extends BaseActivity {
 				com.xmzlb.registermodel.Status status = parseJSON.getStatus();
 				if (status.getSucceed() == 1) { // 得到数据
 					Data2 data = parseJSON.getData();
+                    mBinding.setData(data);
 
-					text_name.setText("用户名：" + data.getUserName());
-					text_rank.setText("等级：" + data.getRankName());
-					textView51.setText("" + data.getRankPoints()); // 积分
-					text_score.setText("当前积分：" + data.getRankPoints()); // 积分
-					text_level.setText("客户等级：" + data.getRankName()); // 等级
-					textView61.setText("￥" + data.getPayPoints()); // 消费总金额
 					UILUtils.displayImageNoAnim(data.getHeadimg(), imageView3);
 
 					if (!picPath.isEmpty()) { // 如果不为空
@@ -338,7 +330,6 @@ public class ScoreActivity extends BaseActivity {
 		case R.id.tab_item1: // 点击底栏首页
 			popupWindowMenu.dismiss();
 			Intent intent_menu1 = new Intent(ScoreActivity.this, MainActivity.class);
-			intent_menu1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu1.putExtra("tabhost", 0);
 			startActivity(intent_menu1);
 			break;
@@ -346,7 +337,6 @@ public class ScoreActivity extends BaseActivity {
 		case R.id.tab_item2: // 点击底栏购物车
 			popupWindowMenu.dismiss();
 			Intent intent_menu2 = new Intent(ScoreActivity.this, MainActivity.class);
-			intent_menu2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu2.putExtra("tabhost", 1);
 			startActivity(intent_menu2);
 			break;
@@ -354,7 +344,6 @@ public class ScoreActivity extends BaseActivity {
 		case R.id.tab_item3: // 点击底栏订单中心
 			popupWindowMenu.dismiss();
 			Intent intent_menu3 = new Intent(ScoreActivity.this, MainActivity.class);
-			intent_menu3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_menu3.putExtra("tabhost", 2);
 			startActivity(intent_menu3);
 			break;
@@ -365,14 +354,11 @@ public class ScoreActivity extends BaseActivity {
 			break;
 		case R.id.tab_item4: // 点击底栏商场指南
 			Intent intent_tab4 = new Intent(ScoreActivity.this, MainActivity.class);
-			intent_tab4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 			intent_tab4.putExtra("tabhost", 3);
 			startActivity(intent_tab4);
 			break;
 		case R.id.tab_item5: // 点击底栏我要供货
-			Intent intent_tab5 = new Intent(ScoreActivity.this, MainActivity.class);
-			intent_tab5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			intent_tab5.putExtra("tabhost", 4);
+			Intent intent_tab5 = new Intent(ScoreActivity.this, IWantSupply.class);
 			startActivity(intent_tab5);
 			break;
 		case R.id.rela_empty_meun:
@@ -433,13 +419,6 @@ public class ScoreActivity extends BaseActivity {
 		lv_losescore.setAdapter(lvLoseAdapter);
 
 		imageView3 = (ImageView) findViewById(R.id.imageView3);
-		text_name = (TextView) findViewById(R.id.text_name);
-		textView51 = (TextView) findViewById(R.id.textView51);
-		text_rank = (TextView) findViewById(R.id.text_rank);
-		textView61 = (TextView) findViewById(R.id.textView61);
-
-		text_score = (TextView) findViewById(R.id.text_score);
-		text_level = (TextView) findViewById(R.id.text_level);
 
 		bar = findViewById(R.id.bar);
 		// 菜单

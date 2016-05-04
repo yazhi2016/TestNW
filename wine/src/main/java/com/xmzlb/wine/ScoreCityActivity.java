@@ -107,21 +107,18 @@ public class ScoreCityActivity extends BaseActivity {
             case R.id.tab_item1: // 点击底栏首页
             case R.id.rela_menu1:
                 Intent intent = new Intent(ScoreCityActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent.putExtra("tabhost", 0);
                 startActivity(intent);
                 break;
             case R.id.tab_item2: // 点击底栏购物车
             case R.id.rela_menu2:
                 Intent intent2 = new Intent(ScoreCityActivity.this, MainActivity.class);
-                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent2.putExtra("tabhost", 1);
                 startActivity(intent2);
                 break;
             case R.id.tab_item3: // 点击底栏订单中心
             case R.id.rela_menu3:
                 Intent intent3 = new Intent(ScoreCityActivity.this, MainActivity.class);
-                intent3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent3.putExtra("tabhost", 2);
                 startActivity(intent3);
                 break;
@@ -134,14 +131,11 @@ public class ScoreCityActivity extends BaseActivity {
                 break;
             case R.id.tab_item4: // 点击底栏商场指南
                 Intent intent4 = new Intent(ScoreCityActivity.this, MainActivity.class);
-                intent4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent4.putExtra("tabhost", 3);
                 startActivity(intent4);
                 break;
             case R.id.tab_item5: // 点击底栏我要供货
-                Intent intent5 = new Intent(ScoreCityActivity.this, MainActivity.class);
-                intent5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent5.putExtra("tabhost", 4);
+                Intent intent5 = new Intent(ScoreCityActivity.this, IWantSupply.class);
                 startActivity(intent5);
                 break;
             case R.id.rela_empty_meun:

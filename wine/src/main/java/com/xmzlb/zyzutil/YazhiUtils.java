@@ -6,6 +6,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.util.Log;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -90,6 +92,12 @@ public class YazhiUtils {
     public static void setImage(String url, SimpleDraweeView view) {
         Uri uri = Uri.parse(url);
         view.setImageURI(uri);
+    }
+
+    public static boolean isShowKeyboard(Context context, View view) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
+        boolean isOpen = imm.isActive(view);
+        return isOpen;
     }
 
 }

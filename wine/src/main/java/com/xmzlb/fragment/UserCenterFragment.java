@@ -43,6 +43,9 @@ public class UserCenterFragment extends Fragment implements OnClickListener {
     private View bar;
     private View popMenu;
     ImageOptions imageOptions;
+    private RadioButton radio1;
+    private RadioButton radio2;
+    private RadioButton radio3;
 
     public UserCenterFragment() {
 
@@ -66,7 +69,7 @@ public class UserCenterFragment extends Fragment implements OnClickListener {
                     .setUseMemCache(false).build();
 
             imageView3 = (ImageView) view.findViewById(R.id.imageView3);
-            initData(type);
+//            initData(type);
             radio0 = (RadioButton) view.findViewById(R.id.radio0);
 
             bar = view.findViewById(R.id.bar);
@@ -89,13 +92,38 @@ public class UserCenterFragment extends Fragment implements OnClickListener {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Bundle arguments = getArguments();
+        if (arguments.getInt("item") != -1) {
+            if (arguments.getInt("item") == 1) {
+                radio1.setChecked(true);
+                type = "1";
+                initData(type);
+            } else if (arguments.getInt("item") == 2) {
+            }
+        } else { //默认进入未付款
+            radio0.setChecked(true);
+            type = "0";
+            initData(type);
+        }
+    }
+
     private void initEvent() {
         radio0.setOnClickListener(this);
-        view.findViewById(R.id.radio1).setOnClickListener(this);
-        view.findViewById(R.id.radio2).setOnClickListener(this);
-        view.findViewById(R.id.radio3).setOnClickListener(this);
+        radio1 = (RadioButton) view.findViewById(R.id.radio1);
+        radio2 = (RadioButton) view.findViewById(R.id.radio2);
+        radio3 = (RadioButton) view.findViewById(R.id.radio3);
+        radio1.setOnClickListener(this);
+        radio2.setOnClickListener(this);
+        radio3.setOnClickListener(this);
         view.findViewById(R.id.back).setOnClickListener(this);
-        view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        if(getActivity().isTaskRoot()) {
+            view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        } else {
+            view.findViewById(R.id.back).setVisibility(View.VISIBLE);
+        }
         view.findViewById(R.id.menu).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu1).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu2).setOnClickListener(this);
@@ -120,10 +148,7 @@ public class UserCenterFragment extends Fragment implements OnClickListener {
                 type = "3";
                 break;
             case R.id.back:
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("tabhost", 0);
-                startActivity(intent);
+                getActivity().finish();
                 break;
             case R.id.menu:
                 popupWindowMenu.showAsDropDown(bar);

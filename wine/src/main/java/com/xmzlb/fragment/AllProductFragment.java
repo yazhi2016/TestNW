@@ -85,6 +85,7 @@ public class AllProductFragment extends Fragment implements OnClickListener {
     String payOrderSn;
     private IWXAPI api;
     private TextView mAllMoney;
+    private MainActivity mActivity;
 
     public AllProductFragment() {
     }
@@ -94,6 +95,8 @@ public class AllProductFragment extends Fragment implements OnClickListener {
         if (view == null) {
             this.inflater = inflater;
             view = inflater.inflate(R.layout.fragment_all_product, container, false);
+
+            mActivity = (MainActivity)getActivity();
 
             imageOptions = new ImageOptions.Builder().setSize(DensityUtil.dip2px(200), DensityUtil.dip2px(200))
                     .setCrop(true) // 很多时候设置了合适的scaleType也不需要它.
@@ -259,7 +262,11 @@ public class AllProductFragment extends Fragment implements OnClickListener {
         radio3.setOnClickListener(this);
 
         view.findViewById(R.id.rele_menu_detailact).setOnClickListener(this);
-        view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        if(getActivity().isTaskRoot()) {
+            view.findViewById(R.id.back).setVisibility(View.INVISIBLE);
+        } else {
+            view.findViewById(R.id.back).setVisibility(View.VISIBLE);
+        }
         view.findViewById(R.id.back).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu1).setOnClickListener(this);
         popMenu.findViewById(R.id.rela_menu2).setOnClickListener(this);
@@ -664,24 +671,15 @@ public class AllProductFragment extends Fragment implements OnClickListener {
                 popupWindowMenu.dismiss();
                 break;
             case R.id.back:
-                Intent intent = new Intent(getActivity(), MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent.putExtra("tabhost", 0);
-                startActivity(intent);
+                getActivity().finish();
                 break;
             case R.id.rela_menu1:
                 popupWindowMenu.dismiss();
-                Intent intent2 = new Intent(getActivity(), MainActivity.class);
-                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent2.putExtra("tabhost", 0);
-                startActivity(intent2);
+                mActivity.mainCall();
                 break;
             case R.id.rela_menu2:
                 popupWindowMenu.dismiss();
-                Intent intent21 = new Intent(getActivity(), MainActivity.class);
-                intent21.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent21.putExtra("tabhost", 1);
-                startActivity(intent21);
+                mActivity.shopCall();
                 break;
             case R.id.rela_menu3:
                 popupWindowMenu.dismiss();

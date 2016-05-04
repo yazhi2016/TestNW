@@ -1,246 +1,291 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/white"
-                tools:context="com.xmzlb.wine.ScoreActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <include
-        android:id="@+id/bar"
-        layout="@layout/toplayout"/>
+    <data>
 
-    <TextView
-        android:id="@+id/text_uilocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bar"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:text="用户中心 > 积分记录"/>
+        <import type="com.xmzlb.registermodel.Data2"/>
+
+        <variable
+            name="data"
+            type="Data2"
+            />
+    </data>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout1"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/text_uilocation"
-        android:background="@drawable/infobg"
-        android:padding="15dp">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context="com.xmzlb.wine.ScoreActivity">
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
-            android:src="@drawable/lucency"/>
+        <include
+            android:id="@+id/bar"
+            layout="@layout/toplayout"/>
 
         <TextView
-            android:id="@+id/text_name"
+            android:id="@+id/text_uilocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView3"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/imageView3"
-            android:text="用户名："/>
-
-        <TextView
-            android:id="@+id/text_rank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_name"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/imageView3"
-            android:text="等级："/>
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_rank"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/imageView3"
-            android:text="积分："/>
-
-        <TextView
-            android:id="@+id/textView51"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_rank"
-            android:layout_toRightOf="@+id/textView5"
-            android:text=" "
-            android:textColor="@color/red"/>
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/imageView3"
-            android:text="消费总金额："/>
-
-        <TextView
-            android:id="@+id/textView61"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView5"
-            android:layout_toRightOf="@+id/textView6"
-            android:text="￥"
-            android:textColor="@color/red"/>
-
-        <Button
-            android:id="@+id/btn_changeIma"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:layout_below="@+id/textView6"
+            android:layout_below="@+id/bar"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
-            android:layout_toRightOf="@+id/imageView3"
-            android:background="@color/wine"
-            android:gravity="center"
-            android:text="设置头像"
-            android:textColor="@color/white"
-            android:textSize="14sp"/>
-    </RelativeLayout>
-
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:layout_below="@+id/relativeLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/radio0"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/selector_bigtopconer"
-            android:button="@null"
-            android:checked="true"
-            android:gravity="center"
-            android:text="客户等级"/>
-
-        <RadioButton
-            android:id="@+id/radio1"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/selector_bigtopconer"
-            android:button="@null"
-            android:gravity="center"
-            android:text="增分记录"/>
-
-        <RadioButton
-            android:id="@+id/radio2"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/selector_bigtopconer"
-            android:button="@null"
-            android:gravity="center"
-            android:text="减分记录"/>
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/henxian"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_below="@+id/radioGroup1"
-        android:background="@color/gray"/>
-
-    <RelativeLayout
-        android:id="@+id/rela1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottombar"
-        android:layout_below="@+id/henxian"
-        android:layout_centerHorizontal="true">
-
-        <TextView
-            android:id="@+id/text_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="23dp"
-            android:text="当前积分： "
-            android:textSize="17sp"/>
-
-        <TextView
-            android:id="@+id/text_level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/text_score"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="客户等级："
-            android:textSize="17sp"/>
+            android:text="用户中心 > 积分记录"/>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_level"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp">
+            android:layout_below="@+id/text_uilocation"
+            android:background="@drawable/infobg"
+            android:padding="15dp">
 
             <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/error"/>
+                android:id="@+id/imageView3"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/lucency"/>
 
             <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="@{data.userName}"/>
+
+            <TextView
+                android:id="@+id/text_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_name"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="@{data.rankName}"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rank"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/textView51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rank"
+                android:layout_toRightOf="@+id/textView5"
+                android:text="@{data.rankPoints}"/>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="消费总金额："/>
+
+            <TextView
+                android:id="@+id/textView61"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView5"
+                android:layout_toRightOf="@+id/textView6"
+                android:text="@{data.payPoints}"
+                android:textColor="@color/red"/>
+
+            <Button
+                android:id="@+id/btn_changeIma"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
-                android:layout_toRightOf="@+id/imageView1"
+                android:layout_below="@+id/textView6"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/imageView3"
+                android:background="@color/wine"
                 android:gravity="center"
-                android:text="积分与客户等级关系，详见《商城指南》"
-                android:textColor="@color/blue"
-                android:textSize="15sp"/>
+                android:text="设置头像"
+                android:textColor="@color/white"
+                android:textSize="14sp"/>
         </RelativeLayout>
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rela2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottombar"
-        android:layout_below="@+id/henxian"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone">
-
-        <ListView
-            android:id="@+id/lv_addscore"
+        <RadioGroup
+            android:id="@+id/radioGroup1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ListView>
-    </RelativeLayout>
+            android:layout_height="30dp"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
 
-    <RelativeLayout
-        android:id="@+id/rela3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottombar"
-        android:layout_below="@+id/henxian"
-        android:layout_centerHorizontal="true"
-        android:visibility="gone">
+            <RadioButton
+                android:id="@+id/radio0"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bigtopconer"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="客户等级"/>
 
-        <ListView
-            android:id="@+id/lv_losescore"
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bigtopconer"
+                android:button="@null"
+                android:gravity="center"
+                android:text="增分记录"/>
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_bigtopconer"
+                android:button="@null"
+                android:gravity="center"
+                android:text="减分记录"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/henxian"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </ListView>
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/radioGroup1"
+            android:background="@color/gray"/>
+
+        <RelativeLayout
+            android:id="@+id/rela1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottombar"
+            android:layout_below="@+id/henxian"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/rela_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="23dp">
+
+                <TextView
+                    android:id="@+id/text_score2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:text="当前"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:id="@+id/text_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/text_score2"
+                    android:text="@{data.rankPoints}"
+                    android:textSize="17sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rela_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela_text1"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/text_level2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客户"
+                    android:textSize="17sp"/>
+
+                <TextView
+                    android:id="@+id/text_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/text_level2"
+                    android:text="@{data.rankName}"
+                    android:textSize="17sp"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela_text2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/error"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:gravity="center"
+                    android:text="积分与客户等级关系，详见《商城指南》"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottombar"
+            android:layout_below="@+id/henxian"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lv_addscore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottombar"
+            android:layout_below="@+id/henxian"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone">
+
+            <ListView
+                android:id="@+id/lv_losescore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/bottombar"
+            layout="@layout/bottomlayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"/>
+
     </RelativeLayout>
-
-    <include
-        android:id="@+id/bottombar"
-        layout="@layout/bottomlayout"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"/>
-
-</RelativeLayout>
+</layout>

@@ -146,7 +146,8 @@ public class AllProductActivity extends BaseActivity {
                     List<Child2> child = listShow.get(arg2).getChild();
                     isShow.set(arg2, true);
 //                    if (child.size() != 0 && listShow.get(arg2).getCatName().contains("按")) {
-                    if (listShow.get(arg2).getCatName().contains("按")) {
+//                    if (listShow.get(arg2).getCatName().contains("按")) {
+                    if(child.size() != 0) {
                         for (int i = 0; i < child.size(); i++) {
                             listShow.add(arg2 + i + 1, child.get(i));
                             isShow.add(arg2 + i + 1, false);
@@ -240,12 +241,13 @@ public class AllProductActivity extends BaseActivity {
                     List<Child2> child2 = child.get(0).getChild();
                     listAll.clear();
                     listAll.addAll(data);
-                    listOne.add(listAll.get(0));
-                    listOne.add(listAll.get(2));
-                    listOne.add(listAll.get(3));
-                    isShow.add(false);
-                    isShow.add(false);
-                    isShow.add(false);
+                    for (int i = 0; i < listAll.size(); i++) {
+                        if(i == 1) {
+                            continue;
+                        }
+                        listOne.add(listAll.get(i));
+                        isShow.add(false);
+                    }
                     listShow.addAll(listOne);
                     lvLeftAdapter.notifyDataSetChanged();
                     gvAdapter.notifyDataSetChanged();
@@ -418,7 +420,6 @@ public class AllProductActivity extends BaseActivity {
             case R.id.tab_item1: // 点击底栏首页
                 popupWindowMenu.dismiss();
                 Intent intent_menu1 = new Intent(AllProductActivity.this, MainActivity.class);
-                intent_menu1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu1.putExtra("tabhost", 0);
                 startActivity(intent_menu1);
                 break;
@@ -426,7 +427,6 @@ public class AllProductActivity extends BaseActivity {
             case R.id.tab_item2: // 点击底栏购物车
                 popupWindowMenu.dismiss();
                 Intent intent_menu2 = new Intent(AllProductActivity.this, MainActivity.class);
-                intent_menu2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu2.putExtra("tabhost", 1);
                 startActivity(intent_menu2);
                 break;
@@ -434,7 +434,6 @@ public class AllProductActivity extends BaseActivity {
             case R.id.tab_item3: // 点击底栏订单中心
                 popupWindowMenu.dismiss();
                 Intent intent_menu3 = new Intent(AllProductActivity.this, MainActivity.class);
-                intent_menu3.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_menu3.putExtra("tabhost", 2);
                 startActivity(intent_menu3);
                 break;
@@ -445,14 +444,11 @@ public class AllProductActivity extends BaseActivity {
                 break;
             case R.id.tab_item4: // 点击底栏商场指南
                 Intent intent_tab4 = new Intent(AllProductActivity.this, MainActivity.class);
-                intent_tab4.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 intent_tab4.putExtra("tabhost", 3);
                 startActivity(intent_tab4);
                 break;
             case R.id.tab_item5: // 点击底栏我要供货
-                Intent intent_tab5 = new Intent(AllProductActivity.this, MainActivity.class);
-                intent_tab5.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                intent_tab5.putExtra("tabhost", 4);
+                Intent intent_tab5 = new Intent(AllProductActivity.this, IWantSupply.class);
                 startActivity(intent_tab5);
                 break;
             case R.id.rela_empty_meun:

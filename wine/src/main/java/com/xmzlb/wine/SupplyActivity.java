@@ -37,7 +37,7 @@ public class SupplyActivity extends BaseActivity {
 		case R.id.rela_bottom_popsale:
 		case R.id.rela_popbrand_packup_homefra:
 			finish();
-			overridePendingTransition(R.anim.actionsheet_dialog_in, R.anim.actionsheet_dialog_out);
+//			overridePendingTransition(R.anim.actionsheet_dialog_in, R.anim.actionsheet_dialog_out);
 			break;
 		case R.id.button1:
 			String name = editText1.getText().toString();
